@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out repository...'
+                checkout scm
+            }
+        }
+
+        stage('Verify Project') {
+            steps {
+                echo 'Verifying project structure...'
+                sh '''
+                    cd Automation/SeleniumWebDriverNavigationCommands
+                    ls -la
+                    if [ ! -f pom.xml ]; then
+                        echo "ERROR: pom.xml not found"
+                        exit 1
+                    fi
+                    if [ ! -d src ]; then
+                        echo "ERROR: src directory not found"
+                        exit 1
+                    fi
+                '''
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building project...'
+                sh '''
+                    cd Automation/SeleniumWebDriverNavigationCommands
+                    /usr/local/bin/mvn clean compile
+                '''
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh '''
+                    cd Automation/SeleniumWebDriverNavigationCommands
+                    /usr/local/bin/mvn test -Dtest=NavigationCommands
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline execution completed'
+        }
+        success {
+            echo 'Build and tests passed successfully!'
+        }
+        failure {
+            echo 'Build or tests failed!'
+        }
+    }
+}
