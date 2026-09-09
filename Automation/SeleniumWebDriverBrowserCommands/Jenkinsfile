@@ -32,7 +32,7 @@ pipeline {
                 echo 'Building project...'
                 sh '''
                     cd Automation/SeleniumWebDriverBrowserCommands
-                    mvn clean compile
+                    /usr/local/bin/mvn clean compile
                 '''
             }
         }
@@ -42,7 +42,7 @@ pipeline {
                 echo 'Running tests...'
                 sh '''
                     cd Automation/SeleniumWebDriverBrowserCommands
-                    mvn test -Dtest=BrowserCommands
+                    /usr/local/bin/mvn test -Dtest=BrowserCommands
                 '''
             }
         }
