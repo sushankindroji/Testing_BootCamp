@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-08T23:11:40 IST" name="Default suite" finished-at="2026-09-08T23:13:06 IST" duration-ms="85934">
+    <groups>
+    </groups>
+    <test started-at="2026-09-08T23:11:40 IST" name="Default test" finished-at="2026-09-08T23:13:06 IST" duration-ms="85934">
+      <class name="javaScriptAlerts.AlertsDemo">
+        <test-method signature="KSRTCLogin()[pri:0, instance:javaScriptAlerts.AlertsDemo@6d4d66d2]" started-at="2026-09-08T23:11:40 IST" name="KSRTCLogin" finished-at="2026-09-08T23:12:17 IST" duration-ms="37599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KSRTCLogin -->
+        <test-method signature="RediffLogin()[pri:0, instance:javaScriptAlerts.AlertsDemo@6d4d66d2]" started-at="2026-09-08T23:12:17 IST" name="RediffLogin" finished-at="2026-09-08T23:13:06 IST" duration-ms="48231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RediffLogin -->
+      </class> <!-- javaScriptAlerts.AlertsDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

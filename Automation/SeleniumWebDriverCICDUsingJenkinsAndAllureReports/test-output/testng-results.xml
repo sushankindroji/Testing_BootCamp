@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-07T12:35:23 IST" name="Default suite" finished-at="2026-09-07T12:37:32 IST" duration-ms="128930">
+    <groups>
+    </groups>
+    <test started-at="2026-09-07T12:35:23 IST" name="Default test" finished-at="2026-09-07T12:37:32 IST" duration-ms="128930">
+      <class name="CICDJenkins.Allure.BrowserCommands">
+        <test-method signature="ChromeBrowserTest1()[pri:0, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:35:23 IST" name="ChromeBrowserTest1" finished-at="2026-09-07T12:35:29 IST" duration-ms="5714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest1 -->
+        <test-method signature="FirefoxBrowserTest1()[pri:1, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:35:29 IST" name="FirefoxBrowserTest1" finished-at="2026-09-07T12:35:37 IST" duration-ms="8314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest1 -->
+        <test-method signature="EdgeBrowserTest1()[pri:2, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:35:37 IST" name="EdgeBrowserTest1" finished-at="2026-09-07T12:35:43 IST" duration-ms="6541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EdgeBrowserTest1 -->
+        <test-method signature="ChromeBrowserTest2()[pri:3, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:35:43 IST" name="ChromeBrowserTest2" finished-at="2026-09-07T12:35:53 IST" duration-ms="9412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest2 -->
+        <test-method signature="FirefoxBrowserTest2()[pri:4, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:35:53 IST" name="FirefoxBrowserTest2" finished-at="2026-09-07T12:36:35 IST" duration-ms="42251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest2 -->
+        <test-method signature="EdgeBrowserTest2()[pri:5, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:36:35 IST" name="EdgeBrowserTest2" finished-at="2026-09-07T12:36:40 IST" duration-ms="5052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EdgeBrowserTest2 -->
+        <test-method signature="ChromeBrowserTest3()[pri:6, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:36:40 IST" name="ChromeBrowserTest3" finished-at="2026-09-07T12:36:45 IST" duration-ms="4741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest3 -->
+        <test-method signature="FirefoxBrowserTest3()[pri:7, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:36:45 IST" name="FirefoxBrowserTest3" finished-at="2026-09-07T12:37:14 IST" duration-ms="28761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest3 -->
+        <test-method signature="EdgeBrowserTest3()[pri:8, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:37:14 IST" name="EdgeBrowserTest3" finished-at="2026-09-07T12:37:19 IST" duration-ms="5049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EdgeBrowserTest3 -->
+        <test-method signature="ChromeBrowserTest4()[pri:9, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:37:19 IST" name="ChromeBrowserTest4" finished-at="2026-09-07T12:37:24 IST" duration-ms="4915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest4 -->
+        <test-method signature="FirefoxBrowserTest4()[pri:10, instance:CICDJenkins.Allure.BrowserCommands@15bb5034]" started-at="2026-09-07T12:37:24 IST" name="FirefoxBrowserTest4" finished-at="2026-09-07T12:37:32 IST" duration-ms="8024" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest4 -->
+      </class> <!-- CICDJenkins.Allure.BrowserCommands -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-07T11:37:45 IST" name="Default suite" finished-at="2026-09-07T11:40:20 IST" duration-ms="154604">
+    <groups>
+    </groups>
+    <test started-at="2026-09-07T11:37:45 IST" name="Default test" finished-at="2026-09-07T11:40:20 IST" duration-ms="154604">
+      <class name="seleniumWebBrowser.BrowserCommands">
+        <test-method signature="ChromeBrowserTest1()[pri:0, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:37:45 IST" name="ChromeBrowserTest1" finished-at="2026-09-07T11:37:55 IST" duration-ms="10046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest1 -->
+        <test-method signature="FirefoxBrowserTest1()[pri:1, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:37:55 IST" name="FirefoxBrowserTest1" finished-at="2026-09-07T11:39:18 IST" duration-ms="82957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest1 -->
+        <test-method signature="EdgeBrowserTest1()[pri:2, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:39:18 IST" name="EdgeBrowserTest1" finished-at="2026-09-07T11:39:24 IST" duration-ms="5498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EdgeBrowserTest1 -->
+        <test-method signature="ChromeBrowserTest2()[pri:3, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:39:24 IST" name="ChromeBrowserTest2" finished-at="2026-09-07T11:39:28 IST" duration-ms="4252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest2 -->
+        <test-method signature="FirefoxBrowserTest2()[pri:4, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:39:28 IST" name="FirefoxBrowserTest2" finished-at="2026-09-07T11:39:36 IST" duration-ms="8056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest2 -->
+        <test-method signature="EdgeBrowserTest2()[pri:5, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:39:36 IST" name="EdgeBrowserTest2" finished-at="2026-09-07T11:39:41 IST" duration-ms="4818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EdgeBrowserTest2 -->
+        <test-method signature="ChromeBrowserTest3()[pri:6, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:39:41 IST" name="ChromeBrowserTest3" finished-at="2026-09-07T11:39:50 IST" duration-ms="8986" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest3 -->
+        <test-method signature="FirefoxBrowserTest3()[pri:7, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:39:50 IST" name="FirefoxBrowserTest3" finished-at="2026-09-07T11:40:03 IST" duration-ms="13167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest3 -->
+        <test-method signature="EdgeBrowserTest3()[pri:8, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:40:03 IST" name="EdgeBrowserTest3" finished-at="2026-09-07T11:40:07 IST" duration-ms="3760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EdgeBrowserTest3 -->
+        <test-method signature="ChromeBrowserTest4()[pri:9, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:40:07 IST" name="ChromeBrowserTest4" finished-at="2026-09-07T11:40:11 IST" duration-ms="4722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChromeBrowserTest4 -->
+        <test-method signature="FirefoxBrowserTest4()[pri:10, instance:seleniumWebBrowser.BrowserCommands@15bb5034]" started-at="2026-09-07T11:40:11 IST" name="FirefoxBrowserTest4" finished-at="2026-09-07T11:40:20 IST" duration-ms="8198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirefoxBrowserTest4 -->
+      </class> <!-- seleniumWebBrowser.BrowserCommands -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
