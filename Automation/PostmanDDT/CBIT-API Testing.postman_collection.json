@@ -1,0 +1,805 @@
+{
+  "info": {
+    "name": "CBIT-API Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET Request Method",
+      "item": [
+        {
+          "name": "AutomationExercise - GET Request - BrandsList",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://automationexercise.com/api/brandsList",
+              "protocol": "https",
+              "host": ["automationexercise", "com"],
+              "path": ["api", "brandsList"]
+            }
+          }
+        },
+        {
+          "name": "AutomationExercise - GET Request - ProductsList",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://automationexercise.com/api/productsList",
+              "protocol": "https",
+              "host": ["automationexercise", "com"],
+              "path": ["api", "productsList"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - All Albums",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/albums",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["albums"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - All Comments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/comments",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["comments"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - All Photos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/photos",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["photos"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - All Todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/todos",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["todos"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/users",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["users"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - Comment 5",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/comments/5",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["comments", "5"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - Photos of Album 4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/albums/4/photos",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["albums", "4", "photos"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - Post 3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/3",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "3"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - GET Request - Todos of User 3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/users/3/todos",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["users", "3", "todos"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST Request Method",
+      "item": [
+        {
+          "name": "AutomationExercise - POST Request - SearchProduct",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "search_product",
+                  "value": "top",
+                  "description": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://automationexercise.com/api/searchProduct",
+              "protocol": "https",
+              "host": ["automationexercise", "com"],
+              "path": ["api", "searchProduct"]
+            }
+          }
+        },
+        {
+          "name": "AutomationExercise - POST Request - VerifyLogin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "email=test@example.com\npassword=Test@123",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://automationexercise.com/api/createAccount",
+              "protocol": "https",
+              "host": ["automationexercise", "com"],
+              "path": ["api", "createAccount"]
+            }
+          }
+        },
+        {
+          "name": "FakestoreAPI - POST Method",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 0,\n    \"title\": \"API Testing\",\n    \"price\": 123,\n    \"description\": \"Postman API\",\n    \"category\": \"Automation Testing\",\n    \"image\": \"https://fakestoreapi.com\"\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fakestoreapi.com/products",
+              "protocol": "https",
+              "host": ["fakestoreapi", "com"],
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - POST Request - Albums",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 1,\n  \"title\": \"Selenium Testing Album\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/albums",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["albums"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - POST Request - Comments",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"postId\": 1,\n  \"name\": \"Sushank\",\n  \"email\": \"sushank@test.com\",\n  \"body\": \"This is a test comment\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/comments",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["comments"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - POST Request - Photos",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"albumId\": 1,\n  \"title\": \"Test Photo\",\n  \"url\": \"https://example.com/photo.jpg\",\n  \"thumbnailUrl\": \"https://example.com/thumbnail.jpg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/photos",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["photos"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - POST Request - Posts",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Selenium API Testing\",\n  \"body\": \"Testing POST request using Postman\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - POST Request - Todos",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 1,\n  \"title\": \"Complete API Testing\",\n  \"completed\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/todos",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["todos"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - POST Request - Users",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Sushank Indroji\",\n  \"username\": \"sushank\",\n  \"email\": \"sushank@test.com\",\n  \"phone\": \"9876543210\",\n  \"website\": \"example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/users",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["users"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUT Request Method",
+      "item": [
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 3",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 3,\n  \"title\": \"Updated Selenium API Testing\",\n  \"body\": \"This post has been updated using PUT request in Postman\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/3",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "3"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 4",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 4,\n  \"title\": \"Updated API Testing Post 4\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/4",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "4"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 5",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 5,\n  \"title\": \"Updated API Testing Post 5\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/5",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "5"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 6",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 6,\n  \"title\": \"Updated API Testing Post 6\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/6",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "6"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 7",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 7,\n  \"title\": \"Updated API Testing Post 7\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/7",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "7"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 8",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 8,\n  \"title\": \"Updated API Testing Post 8\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/8",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "8"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 9",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 9,\n  \"title\": \"Updated API Testing Post 9\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/9",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "9"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 10",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 10,\n  \"title\": \"Updated API Testing Post 10\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/10",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "10"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 11",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 11,\n  \"title\": \"Updated API Testing Post 11\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/11",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "11"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 12",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 12,\n  \"title\": \"Updated API Testing Post 12\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/12",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "12"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 13",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 13,\n  \"title\": \"Updated API Testing Post 13\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/13",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "13"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 14",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 14,\n  \"title\": \"Updated API Testing Post 14\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/14",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "14"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 15",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 15,\n  \"title\": \"Updated API Testing Post 15\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/15",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "15"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - PUT Request - Post 16",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 16,\n  \"title\": \"Updated API Testing Post 16\",\n  \"body\": \"Updated using PUT method\",\n  \"userId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/16",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "16"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "DELETE Request Method",
+      "item": [
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 4",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/4",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "4"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 5",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/5",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "5"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 6",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/6",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "6"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 7",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/7",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "7"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 8",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/8",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "8"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 9",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/9",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "9"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 10",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/10",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "10"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 11",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/11",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "11"]
+            }
+          }
+        },
+        {
+          "name": "JSONPlaceholder - DELETE Request - Post 12",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/12",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts", "12"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
