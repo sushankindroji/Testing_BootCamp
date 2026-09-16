@@ -1,0 +1,214 @@
+// Jenkins Pipeline for JMeter Performance Testing
+// CommonFloor Capstone Project - JMeter Test Execution
+
+pipeline {
+    agent any
+
+    parameters {
+        string(
+            name: 'TEST_PLAN',
+            defaultValue: 'jmeter/HTTP Request.jmx',
+            description: 'JMeter test plan file path'
+        )
+        string(
+            name: 'THREAD_COUNT',
+            defaultValue: '50',
+            description: 'Number of threads for load testing'
+        )
+        string(
+            name: 'RAMP_UP_TIME',
+            defaultValue: '1',
+            description: 'Ramp-up time in seconds'
+        )
+        string(
+            name: 'LOOP_COUNT',
+            defaultValue: '1',
+            description: 'Number of loops per thread'
+        )
+    }
+
+    environment {
+        JMETER_HOME = '/usr/local/bin/jmeter' // Update this to your JMeter installation path
+        RESULTS_DIR = "${WORKSPACE}/jmeter-results-${BUILD_NUMBER}"
+        HTML_REPORT_DIR = "${RESULTS_DIR}/html-report"
+        JTL_RESULTS = "${RESULTS_DIR}/results-${BUILD_NUMBER}.jtl"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo '========== CHECKOUT CODE =========='
+                checkout scm
+                echo "✅ Code checked out from GitHub"
+                sh 'git --version'
+            }
+        }
+
+        stage('Setup') {
+            steps {
+                echo '========== SETUP ENVIRONMENT =========='
+                sh '''
+                    echo "JMeter Home: $JMETER_HOME"
+                    echo "Results Directory: $RESULTS_DIR"
+                    echo "Test Plan: $TEST_PLAN"
+                    echo "Threads: $THREAD_COUNT"
+                    echo "Ramp-up: $RAMP_UP_TIME seconds"
+                    echo "Loops: $LOOP_COUNT"
+                    
+                    # Check if JMeter is installed
+                    if command -v jmeter &> /dev/null; then
+                        echo "✅ JMeter is installed"
+                        jmeter --version
+                    else
+                        echo "❌ JMeter not found. Please install JMeter first."
+                        exit 1
+                    fi
+                    
+                    # Create results directory
+                    mkdir -p $RESULTS_DIR
+                    echo "✅ Results directory created: $RESULTS_DIR"
+                '''
+            }
+        }
+
+        stage('Run JMeter Test') {
+            steps {
+                echo '========== RUN JMETER PERFORMANCE TEST =========='
+                sh '''
+                    cd ${WORKSPACE}
+                    
+                    echo "Starting JMeter test execution..."
+                    echo "Test Plan: $TEST_PLAN"
+                    
+                    # Run JMeter test with parameters
+                    jmeter -n \
+                        -t $TEST_PLAN \
+                        -l $JTL_RESULTS \
+                        -e -o $HTML_REPORT_DIR \
+                        -Jthreads=$THREAD_COUNT \
+                        -Jrampup=$RAMP_UP_TIME \
+                        -Jloops=$LOOP_COUNT \
+                        -j ${RESULTS_DIR}/jmeter-${BUILD_NUMBER}.log
+                    
+                    TEST_EXIT_CODE=$?
+                    
+                    if [ $TEST_EXIT_CODE -eq 0 ]; then
+                        echo "✅ JMeter test execution completed successfully"
+                    else
+                        echo "❌ JMeter test execution failed with exit code: $TEST_EXIT_CODE"
+                        exit $TEST_EXIT_CODE
+                    fi
+                '''
+            }
+        }
+
+        stage('Generate Reports') {
+            steps {
+                echo '========== GENERATE TEST REPORTS =========='
+                sh '''
+                    echo "JTL Results File: $JTL_RESULTS"
+                    echo "HTML Report Directory: $HTML_REPORT_DIR"
+                    
+                    # Check if results file exists
+                    if [ -f "$JTL_RESULTS" ]; then
+                        echo "✅ JTL results file created successfully"
+                        FILE_SIZE=$(du -h $JTL_RESULTS | cut -f1)
+                        echo "Results file size: $FILE_SIZE"
+                    else
+                        echo "❌ JTL results file not found!"
+                        exit 1
+                    fi
+                    
+                    # Check if HTML report was generated
+                    if [ -d "$HTML_REPORT_DIR" ]; then
+                        echo "✅ HTML report directory created successfully"
+                        ls -la $HTML_REPORT_DIR | head -20
+                    else
+                        echo "❌ HTML report directory not found!"
+                        exit 1
+                    fi
+                '''
+            }
+        }
+
+        stage('Analyze Results') {
+            steps {
+                echo '========== ANALYZE TEST RESULTS =========='
+                sh '''
+                    echo "Parsing JMeter results..."
+                    
+                    # Extract key metrics from JTL file
+                    if [ -f "$JTL_RESULTS" ]; then
+                        # Count total samples
+                        TOTAL_SAMPLES=$(grep -c "label=" $JTL_RESULTS || echo "0")
+                        
+                        # Count errors (success="false")
+                        ERROR_COUNT=$(grep 'success="false"' $JTL_RESULTS | wc -l)
+                        
+                        # Count success (success="true")
+                        SUCCESS_COUNT=$(grep 'success="true"' $JTL_RESULTS | wc -l)
+                        
+                        echo "========== TEST METRICS =========="
+                        echo "Total Samples: $TOTAL_SAMPLES"
+                        echo "Successful: $SUCCESS_COUNT"
+                        echo "Failed: $ERROR_COUNT"
+                        
+                        if [ $ERROR_COUNT -eq 0 ]; then
+                            echo "✅ All tests PASSED - 0 errors!"
+                        else
+                            echo "⚠️  Warning: $ERROR_COUNT test(s) failed"
+                        fi
+                    fi
+                '''
+            }
+        }
+
+        stage('Archive Reports') {
+            steps {
+                echo '========== ARCHIVE TEST REPORTS =========='
+                sh '''
+                    echo "Archiving JMeter test reports..."
+                    
+                    # Archive HTML report
+                    if [ -d "$HTML_REPORT_DIR" ]; then
+                        tar -czf ${RESULTS_DIR}/html-report-${BUILD_NUMBER}.tar.gz -C $RESULTS_DIR html-report/
+                        echo "✅ HTML report archived: html-report-${BUILD_NUMBER}.tar.gz"
+                    fi
+                    
+                    # List all generated files
+                    echo ""
+                    echo "========== GENERATED FILES =========="
+                    ls -lh $RESULTS_DIR/
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            echo '========== PIPELINE CLEANUP =========='
+            
+            // Archive JMeter results for Jenkins UI
+            archiveArtifacts artifacts: 'jmeter-results-*/**', 
+                             allowEmptyArchive: true,
+                             onlyIfSuccessful: false
+            
+            // Publish JMeter results
+            perfReport sourceFile: "${RESULTS_DIR}/results-${BUILD_NUMBER}.jtl"
+        }
+
+        success {
+            echo '✅ JMeter Performance Test Pipeline PASSED'
+            echo "Results available at: ${BUILD_URL}artifact/jmeter-results-${BUILD_NUMBER}/"
+        }
+
+        failure {
+            echo '❌ JMeter Performance Test Pipeline FAILED'
+            echo "Check logs at: ${BUILD_URL}console"
+        }
+
+        unstable {
+            echo '⚠️  JMeter Performance Test Pipeline UNSTABLE'
+        }
+    }
+}
