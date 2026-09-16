@@ -31,10 +31,12 @@ ehthumbs.db
 
 # Allure Reports
 allure-report/
-allure-results/
+# IMPORTANT: Keep allure-results for portfolio/presentation
+# allure-results/
 
 # Test Artifacts
-screenshots/
+# IMPORTANT: Keep screenshots for portfolio/presentation
+# screenshots/
 logs/
 test-output/
 test-reports/
