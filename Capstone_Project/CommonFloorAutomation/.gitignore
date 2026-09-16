@@ -1,0 +1,96 @@
+# Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# IDE
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating System
+.DS_Store
+Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Allure Reports
+allure-report/
+allure-results/
+
+# Test Artifacts
+screenshots/
+logs/
+test-output/
+test-reports/
+
+# Local Configuration (with credentials)
+config.local.properties
+local.properties
+
+# Credentials and Secrets
+*.pem
+*.key
+*.keystore
+.env
+.env.local
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+~*
+
+# Node modules (if using npm)
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dependencies downloaded by Maven
+.m2/
+
+# Lock files
+*.lock
+
+# Build artifacts
+build/
+dist/
+out/
+
+# Gradle
+.gradle/
+gradle/
+
+# Misc
+.project
+.settings
+.classpath
+*.log
+*.pid
+
+# Keep source code and configuration
+!pom.xml
+!testng.xml
+!README.md
+!src/
+!.gitignore
