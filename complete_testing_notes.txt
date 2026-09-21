@@ -1,0 +1,995 @@
+SOFTWARE TESTING – COMPLETE NOTES
+1. Introduction to Software Testing
+What is Testing?
+Software Testing is the process of executing a program/application with the intention of finding defects or bugs.
+In simple terms:
+Testing = Comparing expected results with actual results.
+Testing helps verify whether the application satisfies the specified requirements.
+Testing is also associated with:
+* Verification – Are we building the product right?
+* Validation – Are we building the right product?
+
+2. Types of Applications
+Applications can be broadly classified into:
+1. Windows / Standalone Applications
+Applications that run independently on a computer.
+Examples:
+* Calculator
+* Notepad
+* MS Word
+2. Web Applications
+Applications that are accessed through a web browser.
+Examples:
+* Gmail
+* Amazon
+* Flipkart
+3. Client-Server Applications
+Applications where a client communicates with a server to exchange data.
+Example:
+* Banking application
+4. Three-Tier Applications
+A three-tier application generally contains:
+Browser → Application Server → Database
+Example:
+User → Browser → Application → Database
+Each layer has a separate responsibility.
+
+3. Testing vs Debugging
+Testing	Debugging
+Done mainly by testers	Done mainly by developers
+Main intention is to find defects	Main intention is to identify and fix the cause of defects
+Testing executes the application to find failures	Debugging may involve step-by-step execution of code
+Tester reports defects	Developer analyzes and fixes defects
+Part of STLC	Mainly part of development/SDLC activities
+Example
+If a calculator gives 10 instead of 15:
+* Tester: Identifies and reports the problem.
+* Developer: Debugs the code to find the reason and fixes it.
+
+4. Bug vs Defect
+Bug
+A bug is a deviation of the actual behavior from the expected requirement.
+The term bug is commonly used by testers during the testing phase.
+Defect
+A defect is a deviation from the specified requirements/specifications.
+The term defect is commonly used during development activities.
+Simple Difference
+Requirement → Expected Result → Actual Result
+If:
+Expected ≠ Actual → Defect/Bug
+
+5. Necessity / Need for Testing
+Testing is necessary to:
+1. Gain customer confidence
+2. Improve product quality
+3. Avoid extra costs
+4. Reduce business risks
+5. Optimize business operations
+6. Ensure requirements are satisfied
+7. Prevent failures after release
+8. Improve customer satisfaction
+
+6. Psychology / Motto of Testing
+The main objectives of testing are:
+1. Identify defects
+    * Verify business requirements, functional requirements and SRS.
+2. Improve product quality
+    * Finding defects helps developers improve the product.
+3. Ensure requirements are satisfied
+    * Verify that business and user requirements are fulfilled.
+4. Provide information about defects
+    * Testers report defects so that they can be analyzed and corrected.
+Important Point
+A tester's goal is not to prove that the application has no bugs. The goal is to find defects before the customer does.
+
+7. Project vs Product
+Project
+A project/application is generally developed according to the requirements of a particular client or organization.
+Examples:
+* Banking application developed for a specific bank
+* Healthcare application
+* Insurance application
+Characteristics:
+* Client-specific requirements
+* Developed for a particular customer
+* Requirements are usually clearly defined by the client
+
+Product
+A product is developed according to market requirements and can be used by multiple customers.
+Examples:
+* Samsung products
+* Lenovo products
+* Dell products
+* Amazon
+* Flipkart
+* Swiggy
+* Zomato
+* Myntra
+Characteristics:
+* Market-oriented
+* Used by multiple customers
+* Developed based on market/user requirements
+
+8. Case Study – Project and Product
+Examples of Projects
+1. Banking Application
+2. Hospital Management System
+3. Insurance Management System
+4. College Management System
+5. Railway Reservation System
+6. Library Management System
+7. Payroll Management System
+8. School Management System
+9. Hotel Management System
+10. Employee Management System
+Examples of Products
+1. Amazon
+2. Flipkart
+3. Swiggy
+4. Zomato
+5. Myntra
+6. Gmail
+7. Microsoft Office
+8. WhatsApp
+9. Google Chrome
+10. Netflix
+
+9. FRS – Functional Requirements Specification
+FRS = Functional Requirements Specification
+FRS describes the functional requirements of an application.
+It specifies what the system should do.
+It may be prepared based on requirements gathered from:
+* Customers
+* End users
+* Business analysts
+* Stakeholders
+Example
+For a banking application:
+* User should be able to log in.
+* User should be able to check balance.
+* User should be able to transfer money.
+* User should be able to download statements.
+
+10. Seven Principles of Software Testing
+There are 7 important principles of software testing.
+1. Testing Shows the Presence of Defects
+Testing can show that defects exist in a system.
+However, testing cannot prove that the application is completely defect-free.
+
+2. Exhaustive Testing is Impossible
+It is impossible to test every possible input and combination.
+Therefore, testers use techniques such as:
+* Equivalence Partitioning
+* Boundary Value Analysis
+* Decision Tables
+* State Transition Testing
+* Error Guessing
+
+3. Early Testing
+Testing should start as early as possible in the SDLC.
+Finding defects early is generally cheaper and easier than finding them after release.
+Early testing saves time and money.
+
+4. Defect Clustering
+A small number of modules generally contain a large number of defects.
+Therefore, testers should focus more attention on defect-prone modules.
+
+5. Pesticide Paradox
+If the same tests are repeated again and again, they may eventually fail to identify new defects.
+Therefore, test cases should be reviewed and updated regularly.
+
+6. Testing is Context Dependent
+Testing techniques depend on the type of application.
+For example:
+* Banking application → Security and transaction testing are important.
+* Gaming application → Performance and usability are important.
+* Healthcare application → Accuracy and reliability are very important.
+
+7. Absence-of-Errors is a Fallacy
+Even if no defects are found, the application may still fail to satisfy the customer's actual needs.
+Therefore:
+No detected defects ≠ Perfect software
+
+11. Quality Assurance vs Quality Control
+Quality Assurance (QA)
+QA is process-oriented.
+It focuses on preventing defects by improving the development process.
+QA activities are mainly associated with process improvement and SDLC activities.
+Examples:
+* Process definition
+* Standards
+* Reviews
+* Audits
+* Process improvement
+
+Quality Control (QC)
+QC is product-oriented.
+It focuses on identifying defects in the actual product.
+Testing is an important QC activity.
+Simple Difference
+QA → Prevent defects
+QC → Find defects
+
+12. Types of Testing
+Major testing approaches include:
+1. White Box Testing
+2. Black Box Testing
+3. Grey Box Testing
+4. User Acceptance Testing (UAT)
+
+13. White Box Testing
+White Box Testing is testing an application using knowledge of its internal structure, logic, code and implementation.
+It is generally performed by developers or technical testers.
+Major types:
+1. Unit Testing
+2. Integration Testing
+
+14. Unit Testing
+Unit testing is testing the smallest testable unit/component of source code independently.
+Examples of Unit Testing Techniques
+1. Basis Path Testing
+2. Statement Coverage
+3. Branch/Decision Coverage
+4. Loop Coverage
+5. Cyclomatic Complexity
+
+Cyclomatic Complexity
+Cyclomatic complexity is a measure of the number of independent paths in a program.
+It helps determine the minimum number of independent paths that should be tested.
+
+15. Integration Testing
+Integration Testing checks whether different modules/components work correctly when integrated.
+It mainly focuses on:
+Data flow and interaction between modules.
+Types of Integration Testing
+1. Top-Down Integration
+2. Bottom-Up Integration
+3. Hybrid / Sandwich Integration
+Important Terms
+Stub: Used in Top-Down Integration Testing.
+Driver: Commonly used in Bottom-Up Integration Testing.
+
+DAY 2 – BLACK BOX TESTING
+16. Black Box Testing
+Black Box Testing is testing an application without knowing or using its internal code/implementation.
+The tester focuses on:
+* Inputs
+* Outputs
+* Requirements
+* Functional behavior
+It is also called specification-based testing.
+Major Types
+1. Functional Testing
+2. Non-Functional Testing
+
+17. Black Box Test Design Techniques
+Important Black Box testing techniques are:
+1. Equivalence Partitioning
+2. Boundary Value Analysis
+3. Decision Table Testing
+4. State Transition Testing
+5. Error Guessing
+
+18. Equivalence Partitioning
+Equivalence Partitioning divides input data into different groups/classes where the system is expected to behave similarly.
+Example
+Suppose age should be between 18 and 58.
+We can divide the inputs into:
+* Below 18 → Invalid
+* 18–58 → Valid
+* Above 58 → Invalid
+Instead of testing every possible age, we select representative values from each partition.
+
+19. Boundary Value Analysis (BVA)
+Boundary Value Analysis focuses on values at and around the boundaries of an input range.
+For a valid range:
+Minimum = 18
+Maximum = 58
+Around Minimum
+Value	Expected Result
+17 (Min - 1)	Invalid
+18 (Min)	Valid
+19 (Min + 1)	Valid
+Around Maximum
+Value	Expected Result
+57 (Max - 1)	Valid
+58 (Max)	Valid
+59 (Max + 1)	Invalid
+BVA Formula
+Test values around:
+Min - 1, Min, Min + 1
+Max - 1, Max, Max + 1
+
+20. BVA – Case Study Examples
+Example 1 – Age
+Valid range: 18–58
+Boundary values:
+17, 18, 19, 57, 58, 59
+
+Example 2 – Password Length
+Valid length: 8–16 characters
+Boundary values:
+7, 8, 9, 15, 16, 17
+
+Example 3 – Marks
+Valid marks: 0–100
+Boundary values:
+-1, 0, 1, 99, 100, 101
+
+Example 4 – Salary
+Valid range: ₹20,000–₹1,00,000
+Boundary values:
+₹19,999, ₹20,000, ₹20,001, ₹99,999, ₹1,00,000, ₹1,00,001
+
+Example 5 – Mobile Number
+If exactly 10 digits are required:
+Boundary-related checks should include:
+* 9 digits
+* 10 digits
+* 11 digits
+
+21. Decision Table Testing
+A Decision Table is a testing technique used when the output/action depends on multiple conditions.
+It represents:
+Conditions → Actions
+It is also commonly called a Cause-Effect representation/table in basic testing discussions.
+Example – Login
+Conditions:
+* Username correct?
+* Password correct?
+Actions:
+* Allow login
+* Display error
+Username	Password	Action
+Correct	Correct	Login successful
+Correct	Wrong	Show password error
+Wrong	Correct	Show username error
+Wrong	Wrong	Show login error
+Decision tables are useful when there are multiple combinations of conditions.
+
+22. State Transition Testing
+State Transition Testing is used when the behavior of an application depends on its current state and previous actions/events.
+The application moves from one state to another based on an event/action.
+Example – ATM Card
+Possible states:
+1. Card Inserted
+2. PIN Entered
+3. PIN Verified
+4. Transaction Selected
+5. Transaction Completed
+6. Card Ejected
+Example – Login Account
+States:
+Active → Wrong Password → Locked
+After several incorrect login attempts, the account may move from an Active state to a Locked state.
+
+23. Error Guessing
+Error Guessing is a testing technique where testers use their experience and knowledge of common mistakes to predict where defects may occur.
+Common examples:
+* Entering blank values
+* Entering special characters
+* Entering invalid formats
+* Entering very large values
+* Entering negative values
+* Repeatedly clicking buttons
+* Leaving mandatory fields empty
+It is largely based on tester experience.
+
+24. SDLC vs STLC
+SDLC – Software Development Life Cycle
+Typical SDLC phases:
+1. Requirement Gathering / Information Collection
+2. Feasibility Study
+3. Analysis
+4. Design
+5. Development / Coding
+6. Testing
+7. Release / Deployment
+8. Maintenance
+
+25. STLC – Software Testing Life Cycle
+Typical STLC phases:
+1. Requirement Analysis
+2. Test Planning
+3. Test Scenario Identification
+4. Test Case Design / Development
+5. Test Environment Setup
+6. Test Execution
+7. Defect Reporting and Tracking
+8. Test Closure
+
+26. Test Plan
+A Test Plan is a document that describes the overall testing activities for a project.
+It generally defines:
+* What to test
+* When to test
+* How to test
+* Who will test
+* Where testing will be performed
+* Resources
+* Schedule
+* Risks
+* Entry and exit criteria
+The test plan is generally prepared by the Test Manager / Test Lead, depending on the organization.
+
+27. Test Strategy
+A Test Strategy is a high-level document describing the overall testing approach.
+It can define:
+* Testing approach
+* Testing types
+* Tools
+* Techniques
+* Automation approach
+* Risks
+* Standards
+Simple Difference
+Test Plan → Project-specific testing plan
+Test Strategy → Overall/high-level testing approach
+The exact relationship between these documents can vary between organizations.
+
+28. Test Scenario
+A Test Scenario is a high-level condition or functionality that needs to be tested.
+Example – Login
+Possible test scenarios:
+1. Verify login with valid credentials.
+2. Verify login with invalid username.
+3. Verify login with invalid password.
+4. Verify login with blank username.
+5. Verify login with blank password.
+6. Verify login with both fields blank.
+7. Verify password masking.
+8. Verify Forgot Password.
+9. Verify account lock after repeated failures.
+10. Verify logout functionality.
+
+29. Test Case
+A Test Case contains detailed steps used to verify a particular functionality.
+A typical test case contains:
+* Test Case ID
+* Test Scenario
+* Test Steps
+* Test Data
+* Expected Result
+* Actual Result
+* Status (Pass/Fail)
+Example
+Test Case: Verify login with valid credentials.
+Steps:
+1. Open login page.
+2. Enter valid username.
+3. Enter valid password.
+4. Click Login.
+Expected Result: User should be successfully logged in.
+Actual Result: Actual behavior observed during execution.
+Status: Pass / Fail
+
+30. Characteristics of Good Test Cases
+A good test case should be:
+1. Simple
+2. Clear
+3. Easy to understand
+4. Readable
+5. Independent where possible
+6. Maintainable
+7. Reusable where appropriate
+8. Non-duplicative
+9. Traceable to requirements
+10. Able to verify the intended functionality
+Test cases should be written clearly enough that another tester can understand and execute them.
+
+31. Defect Classification
+Defects are commonly classified based on Severity and Priority.
+
+32. Severity
+Severity describes how seriously a defect affects the functionality or business of the application.
+Severity is generally assigned by the QA/Tester.
+Types of Severity
+1. Blocker
+2. Critical
+3. Major
+4. Minor
+Examples
+Blocker: Application cannot proceed or testing is blocked.
+Critical: Major functionality is severely affected.
+Major: Important functionality is not working correctly.
+Minor: Small issue with limited functional impact.
+
+33. Priority
+Priority indicates how urgently a defect should be fixed.
+Priority is generally decided by the development/product team, often with input from QA and business stakeholders.
+Common Priority Levels
+* High – P0
+* Medium – P1
+* Low – P2
+Priority is about urgency, while severity is about impact.
+
+34. Severity vs Priority
+Severity	Priority
+Measures impact of defect	Measures urgency of fixing defect
+Mainly concerned with functionality/business impact	Mainly concerned with business/release importance
+Usually assigned by QA	Usually decided by development/product/business stakeholders
+Blocker/Critical/Major/Minor	High/Medium/Low
+Example: Low Severity + High Priority
+A spelling mistake in the company name on the homepage may have low functional severity but high priority because it is highly visible to customers.
+Example: High Severity + Low Priority
+A serious issue in a rarely used legacy feature might have high technical severity but lower business priority, depending on the product context.
+
+35. Defect / Bug Life Cycle
+A tester's responsibility is generally to identify and report a defect. The developer analyzes and fixes it.
+Typical Defect Life Cycle
+New → Assigned → Open → Fixed → Retest/Verified → Closed
+There can also be alternative statuses.
+
+1. New
+Tester identifies and reports the defect.
+
+2. Assigned
+The defect is assigned to the responsible developer/team.
+
+3. Open
+Developer starts analyzing the defect.
+
+4. Fixed
+Developer fixes the defect and provides the build for testing.
+
+5. Verified / Retest
+Tester retests the defect.
+If the issue is fixed:
+→ Closed
+If the issue still exists:
+→ Reopened
+
+6. Closed
+Tester confirms that the defect has been fixed successfully.
+
+36. Other Defect Statuses
+Rejected
+The reported issue is not considered a valid defect.
+Duplicate
+The same defect has already been reported.
+Deferred
+The defect is genuine, but the team decides to fix it in a future:
+* Sprint
+* Release
+* Version
+
+37. Requirement Traceability Matrix (RTM)
+RTM = Requirement Traceability Matrix
+RTM is used to establish a relationship between requirements and test cases.
+Its main purpose is to ensure that requirements are covered by testing.
+Types of Traceability
+1. Forward Traceability
+Requirements → Test Cases
+It ensures that every requirement has corresponding test cases.
+
+2. Backward Traceability
+Test Cases → Requirements
+It ensures that every test case is associated with a requirement.
+
+3. Bi-Directional Traceability
+Requirements ↔ Test Cases
+It combines both forward and backward traceability.
+Simple Representation
+Forward:
+Requirement → Test Case
+Backward:
+Test Case → Requirement
+Bi-Directional:
+Requirement ↔ Test Case
+
+QUICK REVISION
+Testing
+Execution of software to find defects and verify expected vs actual behavior.
+Debugging
+Finding the cause of a defect and fixing it, mainly by developers.
+Bug
+Deviation from expected behavior/requirement found during testing.
+Defect
+Deviation from specification/expected behavior.
+QA
+Process-oriented → Prevent defects
+QC
+Product-oriented → Detect defects
+White Box
+Internal code/logic is known
+Black Box
+Internal code/logic is not considered
+Unit Testing
+Testing individual units/components
+Integration Testing
+Testing interaction/data flow between modules
+BVA
+Test boundary values and values around boundaries
+Decision Table
+Conditions → Actions
+State Transition
+State → Event → New State
+Error Guessing
+Use experience to predict likely errors
+Severity
+How serious is the defect?
+Priority
+How urgently should it be fixed?
+RTM
+Mapping requirements with test cases
+Defect Life Cycle
+New → Assigned → Open → Fixed → Verified → Closed
+     DAY 4 – SOFTWARE TESTING
+1. Testing Terminologies
+Smoke Testing
+* Testing the stability of a new build.
+* Developer gives .exe/setup.exe build.
+* Build is deployed in the testing environment.
+* Tester checks basic functions.
+* Example: Login, Logout, application launch.
+Smoke Testing → Build stability
+
+Sanity Testing
+* Checking important/critical functionalities of an application.
+* Usually done after minor changes/fixes.
+Sanity Testing → Critical functionality
+
+Ad-hoc Testing
+* Testing the application using predefined ideas without following rules or predefined test cases.
+* Mainly depends on tester experience.
+
+Exploratory Testing
+* Testing an application by exploring it and learning about it while testing.
+* Useful when tester has limited domain knowledge.
+
+Monkey Testing
+* Testing the application randomly due to limited time or to find unexpected failures.
+* Commonly used for games/software.
+
+Gorilla Testing
+* Testing a particular module/functionality repeatedly and intensively.
+
+2. Regression Testing
+Testing existing functionality after changes to ensure the new/modified functionality has not affected existing functionality.
+Regression → Old functionality should not break
+
+3. Retesting
+* Developer fixes a reported defect.
+* Tester tests the same functionality again.
+* Checks whether Expected = Actual.
+Retesting → Checking whether the bug is fixed
+
+Regression vs Retesting
+Retesting	Regression
+Checks whether defect is fixed	Checks whether existing features are affected
+Same failed functionality	Existing functionality
+4. Testing Levels
+1. Unit Testing
+2. Integration Testing
+3. System Testing
+4. User Acceptance Testing (UAT)
+
+5. Non-Functional Testing
+Important types:
+1. GUI Testing
+2. Recovery Testing
+3. Installation Testing
+4. Configuration Testing
+5. Compatibility Testing
+6. Security Testing
+7. Performance Testing
+8. Load Testing
+9. Stress Testing
+10. Peak Testing
+11. Endurance Testing
+12. Spike Testing
+13. Localization / Internationalization Testing
+
+6. GUI Testing
+Testing the user-friendly aspects of an application.
+Check:
+* Help documents
+* Font size/color/alignment
+* Logo
+* Spelling/grammar
+* Images
+* Menu bar
+* Header/Footer
+* Overlapping windows/images
+
+7. Recovery Testing
+Testing whether the application can recover and return to normal state after an unexpected failure/error.
+
+8. Installation Testing
+Checks during installation:
+* setup.exe
+* Uninstallation
+* Repair
+* Update
+* Delete files
+* Memory/storage allocation
+* Popup messages
+
+9. Configuration Testing
+Testing the application in different configurations/versions of operating systems and environments.
+
+10. Compatibility Testing
+Testing whether the application works correctly with different:
+* Browsers
+* Operating systems
+* Devices/environments
+Types:
+* Forward Compatibility → Newer versions
+* Backward Compatibility → Older versions
+
+11. Security Testing
+Testing whether the application is protected from invalid/unauthorized users.
+
+12. Performance Testing
+Load Testing
+Testing application with the expected load.
+Stress Testing
+Testing application beyond its expected load/capacity.
+Peak Testing
+Testing application at peak load.
+Endurance Testing
+Testing application under load for a long duration.
+Spike Testing
+Testing application when load suddenly increases or decreases.
+
+13. Localization / Internationalization
+Localization
+Testing application according to a specific country/region/language.
+Internationalization
+Testing whether application can support multiple countries/languages/regions.
+
+14. Test Execution Levels
+* Level 0 → Build Acceptance Testing
+* Level 1 → Smoke / Sanity Testing
+* Level 2 → Regression Testing
+* Level 3 → Final Regression Testing
+
+15. Automation Testing
+Testing an application using automation tools/scripts is called Automation Testing.
+Examples:
+* Selenium
+* Cucumber
+* TestNG
+
+16. TDD vs BDD
+TDD – Test Driven Development
+* Focuses on code/testing.
+* Test is written before the code.
+BDD – Behaviour Driven Development
+* Focuses on application behaviour.
+* Uses business/user-readable scenarios.
+TDD → Code
+BDD → Behaviour
+
+
+Selenium Notes
+Selenium Version
+* Selenium version: 4.47
+Method Overloading and Method Overriding
+* Write a program on method overloading and method overriding.
+Test Suite
+* Test suite combination of more than one tool.
+* 3-in-1 Selenium tools:
+    1. Selenium WebDriver
+    2. Selenium IDE
+    3. Selenium Grid
+
+Selenium IDE
+* Selenium IDE is a plugin for Edge, Firefox, and Chrome used for exploratory testing.
+* No coding is required for Selenium IDE.
+* It works on a record and playback mechanism.
+* Testers do not need extensive technical or programming knowledge.
+* Once test scripts are recorded, they can be converted into different programming languages.
+
+Selenium Grid
+* Selenium Grid works on a node-based concept.
+* It follows the Master and Slave concept.
+
+Selenium WebDriver
+* Selenium provides language bindings.
+* Selenium supports:
+    * Java
+    * Ruby
+    * C#
+    * Python
+    * JavaScript
+* WebDriver is an interface that consists of a set of libraries.
+* It acts as an interface between the application and the browser.
+Program: Launch Different Browsers Using Selenium WebDriver and TestNG
+Write a program using Selenium WebDriver to launch different browsers:
+* Chrome
+* Edge
+* Firefox
+Use the TestNG framework.
+URL
+https://www.selenium.dev/downloads/
+Date
+07/09/2026
+Program Requirements
+* Write a program using Selenium WebDriver and TestNG.
+* Find out and print the following in the console:
+    * Browser title
+    * Current URL
+* Add required dependencies.
+* Create 3 methods.
+* Push the code to Git.
+* Run the project through Jenkins.
+
+Maven Integration
+* Maven integration.
+* Allure reporting.
+* Use 2 plugins.
+Allure Reports
+* Generate Allure reports.
+* Allure Results
+* Allure Serve
+* Allure TestNG is used to generate Allure reports.
+HTML Publisher
+* Generate HTML reports.
+* Performance Trend.
+
+Supporting Dependencies / Libraries
+* Apache POI is used to read data from Excel sheets.
+* Commons IO dependencies are used to take screenshots.
+* OpenCSV is used to read data from CSV files.
+* Allure TestNG is used to generate Allure reports.
+* TestNG is used to design the testing framework and analyse test results.
+
+Case Study
+* Validate expected values = actual values for:
+    * Browser title
+    * Browser URL
+* Use hard assertions.
+
+Selenium Locators
+Locators are used to identify web elements in the application under test (AUT).
+There are 8 locators:
+1. ID
+2. Name
+3. XPath
+4. Tag Name
+5. Link Text
+6. Partial Link Text
+7. CSS Selector
+8. Class Name
+1. ID
+* ID is a locator used to find an element on a webpage.
+* It is the fastest way to identify an element when a unique ID is available.
+2. Name
+* If the ID locator is not present, we can use the Name locator.
+* The Name locator works similarly to the ID locator but is comparatively slower.
+3. XPath
+XPath stands for XML Path.
+There are two types of XPath:
+1. Absolute XPath
+2. Relative XPath
+Absolute XPath
+* Absolute XPath starts from the HTML root node.
+* It is represented by a single /.
+Relative XPath
+* Relative XPath is represented by //.
+* It searches for the locator value from the parent or relevant node.
+Tools
+* CSS Selector
+* XPath Finder
+* Firebug
+
+Locator Case Study
+Count the number of links on the home page of:
+1. Easy Calculation
+2. Swag Labs
+3. Naukri.com
+4. nopCommerce application
+5. BlazeDemo
+
+Exceptions
+NoSuchElementException
+* Occurs when Selenium cannot find the specified web element.
+
+Partial Link Text
+* Partial Link Text is used to locate a link using any portion of the link text.
+
+Alerts
+* Alert is an interface.
+* OK button → accept()
+* Cancel button → dismiss()
+
+Assertions
+* Assertion means comparing the actual value with the expected value.
+
+Case Studies: Alerts
+1. https://the-internet.herokuapp.com/javascript_alerts
+2. https://www.ksrtc.in/login
+3. https://mail.rediff.com/cgi-bin/login.cgi
+
+Data-Driven Testing / Parameterisation
+* Testing the same functionality of an application using multiple sets of data or different sets of data is called Parameterisation or Data-Driven Testing (DDT).
+
+Multiple Frames in Selenium
+* Multiple frames in Selenium WebDriver.
+  10/9/2026  CASE STUDY
+
+Count Number Items present in below Drop Down List:
+https://elfsight.com/online-form-builder/templates/html-employee-registration-form/
+https://www.qa-practice.com/forms/practice-form
+https://www.facebook.com/reg/?entry_point=login
+
+
+Count the no of radio buttons in SpiceJet.com
+write a selenium web browser application SpiceJet .com and perform operations on each button 
+  drop down,radiobutton, screenshots, testNG data provider, POM,case studies
+
+
+Parametrisation using testng  testng using data providers and weight statements 1 implicit weight 2 explicit weight 3 fluent weight  implicit is used for global time if I use implicit anywhere in program it is applicable to all statements in program  default timeout for implicit is 10 seconds syntax of writing implicit weight 1 driver.manage.tomeouts.implicitlywait(duration.ofSeconds(10))    https://the-internet.herokuapp.com/javascript_alerts http://only-testing-blog.blogspot.com/2014/05/form.html     POM  page object model page Factory: 
+
+
+To execute certain task we need to follow some rules and regulation is called framework there are diff types of frameworks linear framework modular framework keyword driven framework data driven framework hybrid framework   1 linear framework tester no need of any programming skills selenium ide is used for record and playback selenium ice is plugins for latest browsers    2 modular framework tester needs to concentrate on actions   3 data driven framework data will read from external sources/files like my sql server oracle ,sql server, css file, xls files   4 keyword driven framework  this is Las called object repository locators values will be stored as key and pair values   5 hybrid driven framework  it is combination of both data driven and keyword driven framework   
+Xlsx get row and get cell methods for numerical cell value and string cell value  
+
+Case study create a hybrid framework for jotform.com
+
+
+Selenum automation testing db name book details, emp details , emp order, emp no ,     automationexercise.com
+https://automationexercise.com/api/ https://jsonplaceholder.typicode.com/ 
+Collect Minimum 10 End Points each Request Methods
+
+GET Method
+End Points
+https://automationexercise.com/api/productsList
+https://automationexercise.com/api/brandsList
+https://jsonplaceholder.typicode.com/comments
+https://jsonplaceholder.typicode.com/albums
+https://jsonplaceholder.typicode.com/photos
+https://jsonplaceholder.typicode.com/todos
+https://jsonplaceholder.typicode.com/users
+https://jsonplaceholder.typicode.com/posts/3
+https://jsonplaceholder.typicode.com/comments/5
+https://jsonplaceholder.typicode.com/albums/4/photos
+https://jsonplaceholder.typicode.com/users/3/todos 
+POST Method
+End Points
+https://automationexercise.com/api/searchProduct
+https://automationexercise.com/api/createAccount
+https://jsonplaceholder.typicode.com/posts
+https://jsonplaceholder.typicode.com/comments
+https://jsonplaceholder.typicode.com/albums
+https://jsonplaceholder.typicode.com/photos
+https://jsonplaceholder.typicode.com/todos
+https://jsonplaceholder.typicode.com/users 
+PUT Method
+End Points
+https://jsonplaceholder.typicode.com/posts/3
+https://jsonplaceholder.typicode.com/posts/4
+https://jsonplaceholder.typicode.com/posts/5
+https://jsonplaceholder.typicode.com/posts/6
+https://jsonplaceholder.typicode.com/posts/7
+https://jsonplaceholder.typicode.com/posts/8
+https://jsonplaceholder.typicode.com/posts/9
+https://jsonplaceholder.typicode.com/posts/10
+https://jsonplaceholder.typicode.com/posts/11
+https://jsonplaceholder.typicode.com/posts/12
+https://jsonplaceholder.typicode.com/posts/13
+https://jsonplaceholder.typicode.com/posts/14
+https://jsonplaceholder.typicode.com/posts/15
+https://jsonplaceholder.typicode.com/posts/16 
+DELETE Method
+End Points
+https://jsonplaceholder.typicode.com/posts/4
+https://jsonplaceholder.typicode.com/posts/5
+https://jsonplaceholder.typicode.com/posts/6
+https://jsonplaceholder.typicode.com/posts/7
+https://jsonplaceholder.typicode.com/posts/8
+https://jsonplaceholder.typicode.com/posts/9
+https://jsonplaceholder.typicode.com/posts/10
+https://jsonplaceholder.typicode.com/posts/11
+https://jsonplaceholder.typicode.com/posts/12
+
+    Performance Testing meter using aggregate graph using jtl file(meter test log) vs html dashboard reports using Jenkins cicd  use Myntra, Swiggy, zomato(5 applcns), create a thread groups no of users she be 10 ramp up 5 seconds root count 3 use listeners, table entry,  save and execute create csv file generate html reports, create jtl files, then run on Jenkins, create html file,  open meter, run jul file using aggregate graph, validate throughput, latency, 90,95 percentage, median, min, max, avg response time, total samples,   steps jmeter -n -t “path of .jmx" -l “path of .csv"    
+jmeter -n -t “path of .jmx" -l “path of .jtl”  jmeter -g “path of .jtl" -o “path of /HTMLReports2"
+open “path of HTMLReports2/index.html"
+
+   install performance plugin   JDBC connection configuration  config element is used for external data assertions using jdbc connections        
+
+
+
+  
